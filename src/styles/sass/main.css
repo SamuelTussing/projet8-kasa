@@ -1,0 +1,22 @@
+body, h1, h2 {
+  font-family: "Roboto", sans-serif;
+  max-width: 1440px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    background-color: aliceblue;
+    color: green;
+  }
+}
+@media screen and (min-width: 320px) {
+  body {
+    margin: 0px;
+  }
+}/*# sourceMappingURL=main.css.map */
