@@ -1,0 +1,35 @@
+@import "../Utils/variables";
+
+@media screen and (min-width: 320px){
+
+.banniere{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 110px;
+    
+        &_background{
+            height: 110px;
+            width: 100%;  
+            background-color: black;
+            border-radius: 10px;
+        }
+        & img{
+            height: 110px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            opacity: 0.8;
+
+
+        }
+        & h1{
+            color: white;
+            position:relative;
+            bottom: 95px;
+            left: -22px;
+            width: 200px;
+        }
+}
+}

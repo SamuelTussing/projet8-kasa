@@ -1,11 +1,14 @@
 //import { useState } from 'react'
 import '../styles/sass/main.css';
+import Banniere from './Banniere';
 import Header from './Header'
 
 function App() {
   return (
-  <Header />
-
+    <div>
+      <Header />
+      <Banniere />
+    </div>
 );
 }
 
