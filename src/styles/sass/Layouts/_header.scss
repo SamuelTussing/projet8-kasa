@@ -5,7 +5,7 @@
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     max-height: 60px;
     padding: 20px;
     background-color: $background-white;

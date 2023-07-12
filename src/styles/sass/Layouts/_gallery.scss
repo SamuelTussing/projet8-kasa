@@ -1,0 +1,17 @@
+@import "../Utils/variables";
+
+
+@media screen and (min-width: 320px){
+
+.gallery{
+    display: flex;
+    padding: 0px;
+        &_list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+}
+
+}
