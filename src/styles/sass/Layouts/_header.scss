@@ -29,3 +29,13 @@
 
 }
 }
+
+@media screen and (min-width: 500px){
+
+    .header{
+        justify-content: space-around;
+        & a{
+            margin-left: 50px;
+        }
+    }
+}

@@ -22,3 +22,12 @@
 
 
 }
+
+@media screen and (min-width: 500px){
+
+    .footer{
+        & img{
+            width: 125px;
+        }
+    }
+}

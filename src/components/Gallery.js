@@ -9,7 +9,7 @@ function Gallery(){
     return (<div className="gallery">
                 <ul className ='gallery_list'>
                     {annoncesList.map(({id, title, cover, pictures}) => (
-                        <div key={id}>
+                        <div key={id} class='gallery_list_cards'>
 						<Card
 							cover={cover}
 							title={title}

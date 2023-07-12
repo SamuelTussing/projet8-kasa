@@ -5,16 +5,13 @@
 @import "./Utils/variables";
 @import "./Layouts/card";
 @import "./Layouts/gallery";
+@import "./Utils/mixins";
 
 
 @media screen and (min-width: 320px){
 
 body{
-    display: flex;
-    justify-content: center;
-    max-width: 1440px;
-    margin: 0 auto;
-    float: none;
+    @include body
 }
 
 .content{

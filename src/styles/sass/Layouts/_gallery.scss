@@ -6,12 +6,59 @@
 .gallery{
     display: flex;
     padding: 0px;
+    width: 100%;
         &_list{
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 20px;
             padding: 20px;
+            width: 100%;
+                &_cards{
+                    width: 90%;
+                    height: 230px;
+                    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+                    border-radius: 20px;
+                }
         }
 }
 
+}
+
+@media screen and (min-width: 500px){
+
+    .gallery{
+        &_list{
+            &_cards{
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .gallery{
+        &_list{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+                &_cards{
+                    width: 43%;
+                    height: 400px;
+                }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+
+    .gallery{
+        &_list{
+                &_cards{
+                    width: 29%;
+                }
+        }
+    }
 }
