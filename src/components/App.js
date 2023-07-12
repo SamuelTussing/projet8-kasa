@@ -8,7 +8,7 @@ import Gallery from './Gallery'
 
 function App() {
   return (
-    <div class='content'>
+    <div className='content'>
       <Header />
       <Banniere />
       <Gallery />
