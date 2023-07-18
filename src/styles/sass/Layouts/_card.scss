@@ -1,0 +1,44 @@
+@import "../Utils/variables";
+
+
+@media screen and (min-width: 320px){
+
+    .card{
+        list-style-type: none;
+        height: 230px;
+        
+            & img{
+                object-fit:cover;
+                width: 100%;
+                height: 230px;
+                border-radius: 10px;
+            }
+
+            &_overlay{
+                background: linear-gradient(0deg, rgba(0,0,0,1) 6%, rgba(255,255,255,0) 100%);
+                height: 231px;
+                position: relative;
+                top: -234px;
+                opacity: 0.5;
+                border-radius: 10px;
+            }
+            & h2{
+                color: rgb(211, 211, 211);
+                position: relative;
+                top: -311px;
+                left : 10px;
+                max-width: 70%;
+                font-weight: 300;
+                font-size: 16px;
+            }
+    }
+}
+
+@media screen and (min-width: 500px){
+    .card{
+        height: 400px;
+            & img{
+                height: 400px;
+            }
+    }
+}

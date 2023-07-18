@@ -1,11 +1,21 @@
 @import "./Base/baserules";
 @import "./Layouts/header";
+@import "./Layouts/banniere";
+@import "./Layouts/footer";
+@import "./Utils/variables";
+@import "./Layouts/card";
+@import "./Layouts/gallery";
+@import "./Utils/mixins";
 
 
 @media screen and (min-width: 320px){
 
 body{
-    margin: 0px;
+    @include body
+}
+
+.content{
+    padding: 0;
 }
 
 }
