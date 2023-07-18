@@ -193,33 +193,43 @@ h1 {
   }
 }
 @media screen and (min-width: 320px) {
-  .aPropos {
+  .accordion {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
   }
-  .dropdownCard {
+  .accordion_card {
+    width: 100%;
+  }
+  .accordion_card_top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .accordion_card_heading {
     background-color: #ff6060;
+    color: white;
+    padding: 5px 15px;
     border-radius: 10px;
-    color: #ff6060;
-    padding: 20px 0;
-    padding: 0 15px;
-    width: 70%;
-    height: 65px;
-    cursor: pointer;
+    width: 100%;
   }
-  .dropdownCard h2 {
-    font-weight: 300;
+  .accordion_card_heading_picto {
+    position: relative;
+    right: 50px;
     color: white;
   }
-  .dropdownCard_content {
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    padding: 0px 0px 0px 15px;
-    width: 71%;
-    height: 200px;
-    top: -16px;
-    position: relative;
+  .accordion_card_content {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  .active {
+    display: block;
+  }
+  .inactive {
+    display: none;
   }
 }
 .error {
@@ -232,7 +242,7 @@ h1 {
 }
 .error span {
   color: #ff6060;
-  font-size: 80px;
+  font-size: 200px;
   font-weight: 900;
 }
 .error a {

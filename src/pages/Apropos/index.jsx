@@ -1,4 +1,6 @@
 import Banner from '../../components/Banner';
+import Accordion from '../../components/VerticalAccordion'
+//import { aProposList } from '../../datas/apropos'
 
 
 
@@ -6,14 +8,7 @@ function aPropos() {
     return (
       <div>
         <Banner />
-        <div className='aPropos'>
-            <div className='dropdownCard'>
-                <h2>Title</h2>
-            </div>
-            <div class='dropdownCard_content'>
-                <p>blablablablablababablablab</p>
-            </div>
-        </div>
+        <Accordion />
       </div>
   
   );
