@@ -1,4 +1,4 @@
-import banniereImg from '../assets/banniere_Img.jpg'
+import banniereImg from '../../assets/banniere_Img.jpg'
 
 function Banniere(){
     return <div className='banniere'>

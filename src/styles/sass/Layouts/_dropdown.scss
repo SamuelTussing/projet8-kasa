@@ -1,0 +1,34 @@
+@import "../Utils/variables";
+
+@media screen and (min-width: 320px){
+
+    .aPropos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .dropdownCard{
+        background-color: $first-color;
+        border-radius: 10px;
+        color: $first-color;
+        padding: 20px 0;
+        padding: 0 15px;
+        width: 70%;
+        height: 65px;
+        cursor: pointer;
+            & h2{
+                font-weight: 300;
+                color: white;
+            }
+            &_content{
+                box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+                padding: 0px 0px 0px 15px;
+                width: 71%;
+                height: 200px;
+                top: -16px;
+                position: relative;
+            }
+           
+        }
+    }
