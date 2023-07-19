@@ -29,9 +29,6 @@ function Accordion(){
     //Fade is for css transition
     return(
         <div className='accordion'>
-            <div>
-                <span className='accordion_title'>A propos</span>
-            </div>
             <div className='accordion_card'>
                 {aProposList.map((item,index,title,content) =>
                     <div key={index} onClick={() => toogleAccordion(index)}>

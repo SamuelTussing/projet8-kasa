@@ -93,10 +93,11 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     background-color: black;
-    max-height: 209px;
     padding: 20px;
     gap: 10px;
+    height: 250px;
   }
   .footer img {
     width: 30%;
@@ -209,7 +210,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
   }
   .accordion_card_heading {
     background-color: #ff6060;
@@ -249,6 +250,9 @@ h1 {
     opacity: 0;
     transform: scaleY(0);
   }
+  .apcontainer {
+    min-height: 75%;
+  }
 }
 .error {
   display: flex;
@@ -269,11 +273,43 @@ h1 {
 }
 
 @media screen and (min-width: 320px) {
+  .banniere2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 350px;
+    margin-top: 20px;
+  }
+  .banniere2_background2 {
+    width: 95%;
+    background-color: black;
+    border-radius: 10px;
+  }
+  .banniere2 img {
+    max-height: 350px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.95;
+  }
+}
+@media screen and (min-width: 500px) {
+  .banniere2 {
+    height: 200px;
+    margin-bottom: 50px;
+  }
+  .banniere2 img {
+    max-height: 200px;
+  }
+}
+@media screen and (min-width: 320px) {
   * {
     font-family: Montserrat, sans-serif;
     font-size: 18px;
   }
-  html, body {
+  html {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -287,6 +323,7 @@ h1 {
     max-width: 1440px;
     margin: 0 auto;
     float: none;
+    min-height: 100%;
   }
   .content {
     padding: 0;

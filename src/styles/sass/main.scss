@@ -7,6 +7,8 @@
 @import "./Layouts/gallery";
 @import "./Layouts/accordion";
 @import "./Layouts/error";
+@import "./Layouts/banner2";
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap');
 
 
@@ -18,7 +20,7 @@
 }
  
 
-html, body{
+html{
     height:100%;
     margin: 0;
     padding: 0;
@@ -34,6 +36,7 @@ body{
     max-width: 1440px;
     margin: 0 auto;
     float: none;
+    min-height:100%;
 }
 
 .content{
