@@ -116,6 +116,7 @@ h1 {
   .card {
     list-style-type: none;
     height: 230px;
+    cursor: pointer;
   }
   .card img {
     -o-object-fit: cover;
@@ -302,6 +303,74 @@ h1 {
   }
   .banniere2 img {
     max-height: 200px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 280px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  .slide {
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 7px rgba(102, 102, 102, 0.1647058824);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    display: block;
+  }
+  .slide_hidden {
+    display: none;
+  }
+  .arrow {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+  }
+  .arrow_left {
+    left: 16px;
+  }
+  .arrow_right {
+    right: 23px;
+  }
+  .arrow:hover {
+    cursor: pointer;
+  }
+  .indicators {
+    display: flex;
+    gap: 7px;
+    position: absolute;
+    bottom: 25px;
+  }
+  .indicator {
+    display: flex;
+    gap: 10px;
+    width: 8px;
+    height: 18px;
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  .indicator_selected {
+    background-color: #ffffff;
   }
 }
 @media screen and (min-width: 320px) {

@@ -1,8 +1,12 @@
 
+import Slider from '../../components/Slider'
+
+import { annoncesList } from '../../datas/test'
+
 function Logement() {
     return (
-        <div>
-            <h1>Questionnaire 🧮</h1>
+        <div className='container'>
+            <Slider data={annoncesList} />
         </div>
     )
 }
