@@ -2,22 +2,25 @@
 
 @media screen and (min-width: 320px){
     .categoryButton{
-
-
+        display: flex;
+        position: relative;
+        left: -32px;
         color: white;
         margin-bottom: 10px;
             &_btn{
                 display: flex;
-                justify-content: flex-start;
                 list-style-type: none;
                 flex-wrap: wrap;
-                gap:10px;
-	            justify-content: center;
+                grid-gap: 10px;
+                gap: 10px;
                 padding: 32px;
+                width: 100%;
+                flex-direction: row;
                     & li{
                         background-color: $first-color;
-                        padding: 10px 5px;
+                        padding: 10px 10px;
                         border-radius: 10px;
+                        text-align: center;
                     }
             }
     }

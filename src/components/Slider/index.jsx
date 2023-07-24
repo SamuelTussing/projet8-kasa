@@ -40,7 +40,7 @@ function Slider({data}) {
                 {data2.map((item,index) =>{
                     return <img
                         src={item}
-                        key={data.index}
+                        key={item}
                         alt={item.alt}
                         className={slide === index ? "slide" : "slide slide_hidden"}/>
                 })}

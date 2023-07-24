@@ -1,0 +1,31 @@
+@import "../Utils/variables";
+
+
+@media screen and (min-width: 320px){
+.logementDescription{
+    color: $first-color;
+    &_title{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    & span{
+        font-size: 14px;
+    }
+}
+}
+
+@media screen and (min-width: 500px){
+
+    .logementDescription{
+
+        &_title{
+            width: 70%;
+            line-height: 40px;
+            font-size: 36px;
+        }
+        & span{
+            font-size: 18px;
+        }
+    }
+
+}

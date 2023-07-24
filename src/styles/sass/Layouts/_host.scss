@@ -1,0 +1,55 @@
+@import '../../sass/Utils/variables';
+
+@media screen and (min-width: 320px){
+
+    .host{
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        position: relative;
+        bottom: 52px;
+        &_name{
+            font-size: 12px;
+            width: 80px;
+            display: block;
+        }
+        &_img{
+            height: 32px;
+            width: 32px;
+            border-radius: 100%;
+        }
+    }
+}
+@media screen and (min-width: 500px){
+
+    .host{
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        position: relative;
+        bottom: 260px;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+
+    .host{
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        position: relative;
+        bottom: 234px;
+        &_name{
+            font-size: 18px;
+            width: 100px;
+            display: block;
+        }
+        &_img{
+            height: 64px;
+            width: 64px;
+            border-radius: 100%;
+        }
+    }
+
+}

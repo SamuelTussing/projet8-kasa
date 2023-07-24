@@ -384,22 +384,96 @@ h1 {
 }
 @media screen and (min-width: 320px) {
   .categoryButton {
+    display: flex;
+    position: relative;
+    left: -32px;
     color: white;
     margin-bottom: 10px;
   }
   .categoryButton_btn {
     display: flex;
-    justify-content: flex-start;
     list-style-type: none;
     flex-wrap: wrap;
+    grid-gap: 10px;
     gap: 10px;
-    justify-content: center;
     padding: 32px;
+    width: 100%;
+    flex-direction: row;
   }
   .categoryButton_btn li {
     background-color: #ff6060;
-    padding: 10px 5px;
+    padding: 10px 10px;
     border-radius: 10px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 320px) {
+  .logementDescription {
+    color: #ff6060;
+  }
+  .logementDescription_title {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .logementDescription span {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .logementDescription_title {
+    width: 70%;
+    line-height: 40px;
+    font-size: 36px;
+  }
+  .logementDescription span {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .host {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    bottom: 52px;
+  }
+  .host_name {
+    font-size: 12px;
+    width: 80px;
+    display: block;
+  }
+  .host_img {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .host {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    bottom: 260px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .host {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    bottom: 234px;
+  }
+  .host_name {
+    font-size: 18px;
+    width: 100px;
+    display: block;
+  }
+  .host_img {
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
   }
 }
 @media screen and (min-width: 320px) {
