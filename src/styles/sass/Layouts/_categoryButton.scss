@@ -1,0 +1,29 @@
+@import "../Utils/variables";
+
+@media screen and (min-width: 320px){
+    .categoryButton{
+
+
+        color: white;
+        margin-bottom: 10px;
+            &_btn{
+                display: flex;
+                justify-content: flex-start;
+                list-style-type: none;
+                flex-wrap: wrap;
+                gap:10px;
+	            justify-content: center;
+                padding: 32px;
+                    & li{
+                        background-color: $first-color;
+                        padding: 10px 5px;
+                        border-radius: 10px;
+                    }
+            }
+    }
+    
+}
+
+@media screen and (min-width: 500px){
+    
+}

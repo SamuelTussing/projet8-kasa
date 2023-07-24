@@ -171,6 +171,9 @@ h1 {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
   }
+  .gallery_list_cards_link {
+    text-decoration: none;
+  }
 }
 @media screen and (min-width: 500px) {
   .gallery_list_cards {
@@ -346,8 +349,14 @@ h1 {
   .arrow_left {
     left: 16px;
   }
+  .arrow_left img {
+    height: 30px;
+  }
   .arrow_right {
-    right: 23px;
+    right: 4px;
+  }
+  .arrow_right img {
+    height: 30px;
   }
   .arrow:hover {
     cursor: pointer;
@@ -371,6 +380,26 @@ h1 {
   }
   .indicator_selected {
     background-color: #ffffff;
+  }
+}
+@media screen and (min-width: 320px) {
+  .categoryButton {
+    color: white;
+    margin-bottom: 10px;
+  }
+  .categoryButton_btn {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 32px;
+  }
+  .categoryButton_btn li {
+    background-color: #ff6060;
+    padding: 10px 5px;
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 320px) {

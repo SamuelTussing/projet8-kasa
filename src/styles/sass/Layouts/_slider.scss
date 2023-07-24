@@ -41,9 +41,15 @@
         color: white;
             &_left{
                 left: 16px;
+                    & img{
+                        height: 30px;
+                    }
             }
             &_right{
-                right: 23px;
+                right: 4px;
+                & img{
+                    height: 30px;
+                }
             }
             &:hover{
                 cursor: pointer;
