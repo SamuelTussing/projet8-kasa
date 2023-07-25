@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-import { aProposList } from '../../datas/apropos'
-import {Fade} from "../Fade"
+import { annoncesList } from '../../../datas/annonces'
+import {Fade} from "../../Fade"
+import { useParams } from 'react-router-dom'
 
 
-function Accordion(){
+function Accordion2(){
     //first const define the accordion state (open/close)
     //second const give state for css transition
     const [accordion, setActiveAccordion] = useState(-1)
@@ -22,6 +23,13 @@ function Accordion(){
         setOpen(o => !o)
     }
 
+
+    const { id } = useParams()
+    const logement = annoncesList.find((opop) => opop.id === id)
+    const equipementsAnnonce = logement.equipments
+    const index = 1;
+
+
     //we map the data.js to create  accordion per element. Each element is defined by id/index
     //we listen to click to change state and play transition
     //on click, if accordion = index then add class .active if not add noclass
@@ -30,11 +38,10 @@ function Accordion(){
     return(
         <div className='accordion'>
             <div className='accordion_card'>
-                {aProposList.map((item,index,title,content) =>
                     <div key={index} onClick={() => toogleAccordion(index)}>
                         <div className='accordion_card_top'>
                             <div className='accordion_card_heading'>
-                                <h2 className={accordion=== index ? "active" : "" }>{item.title}</h2>
+                                <h2 className={accordion=== index ? "active" : "" }>Equipements</h2>
                             </div>
                             <div className='accordion_card_heading_picto'>
                                 {accordion === index ? (
@@ -49,16 +56,15 @@ function Accordion(){
                             </div>
                         </div>
                         <Fade visible={open}>
-                            <div className={accordion === index ? "accordion_card_content active" : "accordion_card_content inactive"} >
-                                <li className={accordion === index ? "active" : "inactive"}>{item.content}</li>
-                            </div>
+                                <div className={accordion === index ? "accordion_card_content active" : "accordion_card_content inactive"} >
+                                    <p className={accordion === index ? "active" : "inactive"}>{equipementsAnnonce}</p>
+                                </div>                            
                         </Fade>
                     </div>
-                    )}
             </div>
         </div>
     )
 }
 
 
-export default Accordion
+export default Accordion2

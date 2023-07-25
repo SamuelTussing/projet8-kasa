@@ -7,14 +7,21 @@
     &_title{
         font-weight: 500;
         font-size: 18px;
+        width: 90%;
     }
     & span{
         font-size: 14px;
     }
+    &_stats{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 }
 }
 
-@media screen and (min-width: 500px){
+@media screen and (min-width: 767px){
 
     .logementDescription{
 
@@ -25,6 +32,11 @@
         }
         & span{
             font-size: 18px;
+        }
+        &_stats{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 

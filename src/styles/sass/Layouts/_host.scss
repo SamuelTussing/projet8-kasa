@@ -7,11 +7,14 @@
         justify-content:flex-end;
         align-items: center;
         position: relative;
-        bottom: 52px;
+        bottom: 76px;
+        
         &_name{
             font-size: 12px;
             width: 80px;
             display: block;
+            text-align: end;
+            margin-right: 5px;
         }
         &_img{
             height: 32px;
@@ -27,7 +30,7 @@
         justify-content:flex-end;
         align-items: center;
         position: relative;
-        bottom: 260px;
+        bottom: 420px;
     }
 }
 
@@ -39,7 +42,7 @@
         justify-content:flex-end;
         align-items: center;
         position: relative;
-        bottom: 234px;
+        bottom: 187px;
         &_name{
             font-size: 18px;
             width: 100px;

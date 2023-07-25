@@ -11,22 +11,35 @@
                 display: flex;
                 list-style-type: none;
                 flex-wrap: wrap;
-                grid-gap: 10px;
                 gap: 10px;
-                padding: 32px;
                 width: 100%;
-                flex-direction: row;
                     & li{
                         background-color: $first-color;
                         padding: 10px 10px;
                         border-radius: 10px;
                         text-align: center;
+                        width: 65px;
+                        display: flex;
+                        font-size: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        }
                     }
             }
     }
     
-}
 
-@media screen and (min-width: 500px){
-    
+
+
+
+@media screen and (min-width: 768px){
+    .categoryButton{
+        &_btn{
+            & li{
+                width: 100px;
+                font-size: 14px;
+
+            }
+        }
+    }
 }
