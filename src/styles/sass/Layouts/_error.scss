@@ -1,0 +1,19 @@
+@import "../Utils/variables";
+
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: $first-color;
+    height: 86%;
+    & span{
+        color: $first-color;
+        font-size: 200px;
+        font-weight: 900;
+    }
+    & a{
+        text-decoration: underline;
+        color: $first-color;
+    }
+}

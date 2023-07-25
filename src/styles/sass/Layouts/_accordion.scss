@@ -1,0 +1,90 @@
+@import "../Utils/variables";
+
+@media screen and (min-width: 320px){
+
+    .accordion{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+            &_card{
+                width: 100%;
+                &_top{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    cursor: pointer;
+                    margin-bottom: 35px;
+                    position: relative;
+                    bottom: 50px;
+
+                }
+                &_heading{
+                    background-color: $first-color;
+                    color: white;
+                    padding : 5px 15px;
+                    border-radius: 10px;
+                    width: 100%;
+                    &_picto{
+                        position: relative;
+                        right: 50px;
+                        color: white;
+                    }
+                }
+                &_content{
+                    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+                    padding : 10px;
+                    color: $first-color;
+                    position: relative;
+                    top: -83px;
+                    width: 92%; 
+                    background-color: #f6f6f6;
+
+                }
+            }
+
+    }
+
+    .active{
+        display: block;
+    }
+
+    .inactive{
+        display: none;
+    }
+
+    .fade{
+        transition: all .3s;
+        transition-timing-function: ease-in-out;
+        transform-origin: 100% -50%;
+        transform: scaleY(1);
+    }
+
+    .fade.out{
+        transition: all .3s;
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    .apcontainer{
+        min-height: 75%;
+
+    }
+
+    }
+
+    @media screen and (min-width: 500px){
+
+        .infos{
+            display: flex;
+            flex-direction: row;
+        }
+        .accordion{
+
+                &_card{
+                    width: 100%;
+                }
+        }
+    }

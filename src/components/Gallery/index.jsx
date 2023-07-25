@@ -1,5 +1,5 @@
-import { annoncesList } from '../datas/annonces'
-import Card from './Card'
+import { annoncesList } from '../../datas/annonces'
+import Card from '../Card/index'
 
 
 

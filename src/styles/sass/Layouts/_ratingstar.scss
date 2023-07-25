@@ -1,0 +1,46 @@
+@import '../Utils/variables';
+
+
+@media screen and (min-width: 320px){
+    .rating{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+        
+
+    }
+
+    .fa-star{
+        height: 18px;
+        color: #e3e3e3;
+    }
+
+    .red{
+        color: $first-color;
+    }
+    .small{
+        display: block;
+    }
+    .big{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 500px){
+
+    .rating{
+        gap: 10px;
+        size: 50px;
+    }
+    .small{
+        display: none;
+    }
+    .big{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 767px) {
+
+}
