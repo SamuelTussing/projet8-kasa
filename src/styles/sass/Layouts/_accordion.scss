@@ -5,10 +5,8 @@
     .accordion{
         display: flex;
         flex-direction: column;
-        gap: 15px;
         align-items: center;
         width: 80%;
-        margin: auto;
             &_card{
                 width: 100%;
                 &_top{
@@ -25,8 +23,11 @@
                     background-color: $first-color;
                     color: white;
                     padding : 5px 15px;
-                    border-radius: 10px;
+                    border-radius: 5px;
                     width: 100%;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
                     &_picto{
                         position: relative;
                         right: 50px;
@@ -37,54 +38,107 @@
                     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
                     padding : 10px;
                     color: $first-color;
-                    position: relative;
-                    top: -83px;
-                    width: 92%; 
+                    width: calc(100% - 38px); 
                     background-color: #f6f6f6;
 
                 }
             }
+        }
 
-    }
+            .rot{
+                animation: rotation .3s ease-in-out both normal;
+            }
+            .rotrev{
+                animation: rotationrev .3s ease-in-out both normal;
+            }
+
+            @keyframes rotation {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                95%{
+                    transform: rotateZ(180deg);
+                }
+                100%{
+                    transform: rotateZ(180deg);
+                }
+                
+            }
+
+            @keyframes rotationrev {
+                0%{
+                    transform: rotateZ(180deg);
+                }
+                5%{
+                    transform: rotateZ(180deg);
+                }
+                100%{
+                    transform: rotateZ(0deg);
+                }
+                
+            }
+    
 
     .active{
         display: block;
     }
 
     .inactive{
-        display: none;
+        transition: all .2s;
+        transition-timing-function: ease-out;
+        transform-origin: 50% 0%;
+        opacity: 0;
+        transform: scaleY(0);
+        max-height: 5px;
     }
 
     .fade{
-        transition: all .3s;
-        transition-timing-function: ease-in-out;
-        transform-origin: 100% -50%;
+        transition: all .2s;
+        transition-timing-function: ease-out;
+        transform-origin: 50% 0%;
         transform: scaleY(1);
+        max-height: 550px;
+        position: relative;
+        bottom: 83px;
+        
     }
 
     .fade.out{
-        transition: all .3s;
+        transition: all .2s;
+        transition-timing-function: ease-in;
+        transform-origin: 50% 0%;
         opacity: 0;
         transform: scaleY(0);
+        max-height: 10px;
     }
 
     .apcontainer{
         min-height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
     }
 
     }
 
-    @media screen and (min-width: 500px){
 
-        .infos{
-            display: flex;
-            flex-direction: row;
-        }
-        .accordion{
 
-                &_card{
-                    width: 100%;
-                }
+    @media screen and (min-width: 768px){
+
+        .fade{
+
+            max-height: 250px;
+            transform-origin: 50% 0%;
         }
+    
+        .fade.out{
+
+            max-height: 250px;
+            transform-origin: 50% 0%;
+        }
+
+
+
+        
     }

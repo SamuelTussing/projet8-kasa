@@ -1,7 +1,6 @@
 import { annoncesList } from '../../datas/annonces'
 import Card from '../../components/Card'
 import Banner from '../../components/Banner'
-//import{useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
 
@@ -11,7 +10,7 @@ import {Link} from 'react-router-dom'
 function Home(){
     
 
-
+    
     return ( <div>
               <Banner />
               <div className="gallery">

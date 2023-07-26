@@ -46,11 +46,11 @@ function Accordion1(){
                             <div className='accordion_card_heading_picto'>
                                 {accordion === index ? (
                                 <>
-                                    <i class="fas fa-chevron-up"></i>
+                                    <i className="fas fa-chevron-up"></i>
                                 </>
                                 ) : (
                                 <>
-                                    <i class="fas fa-chevron-down"></i>
+                                    <i className="fas fa-chevron-down"></i>
                                 </>
                                 )}
                             </div>

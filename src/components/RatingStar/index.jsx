@@ -17,13 +17,13 @@ function RatingStar(){
     console.log(ratingAnnonce)
 
 return(
-    <div className="rating">
+    <div className="rating" key="rating">
         {[...Array(5)].map((star, index) => {
             index +=1;
-            return( <>            
-                <i className={ratingAnnonce >= index ? "fa-solid fa-star red small" : "fa-solid fa-star small"} id={index}></i>
-                <i className={ratingAnnonce >= index ? "fa-solid fa-star red big fa-2x" : "fa-solid fa-star big fa-2x"} id={index}></i>
-                </>  )
+            return( <div key={`key${index}`}>           
+                <i className={ratingAnnonce >= index ? "fa-solid fa-star red small" : "fa-solid fa-star small"} id={index} key={index}></i>
+                <i className={ratingAnnonce >= index ? "fa-solid fa-star red big fa-2x" : "fa-solid fa-star big fa-2x"} id={index}key={`1+${index}`}></i>
+                </div>  )
         })}
     </div>
 )

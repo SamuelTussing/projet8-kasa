@@ -30,6 +30,7 @@ function Accordion2(){
     const index = 1;
 
 
+
     //we map the data.js to create  accordion per element. Each element is defined by id/index
     //we listen to click to change state and play transition
     //on click, if accordion = index then add class .active if not add noclass
@@ -46,21 +47,26 @@ function Accordion2(){
                             <div className='accordion_card_heading_picto'>
                                 {accordion === index ? (
                                 <>
-                                    <i class="fas fa-chevron-up"></i>
+                                    <i className="fas fa-chevron-up"></i>
                                 </>
                                 ) : (
                                 <>
-                                    <i class="fas fa-chevron-down"></i>
+                                    <i className="fas fa-chevron-down"></i>
                                 </>
                                 )}
                             </div>
                         </div>
                         <Fade visible={open}>
-                                <div className={accordion === index ? "accordion_card_content active" : "accordion_card_content inactive"} >
-                                    <p className={accordion === index ? "active" : "inactive"}>{equipementsAnnonce}</p>
-                                </div>                            
+                                <ul className={accordion === index ? "accordion_card_content active" : "accordion_card_content inactive"} >
+                                    
+                                    {equipementsAnnonce.map((item,index) =>{
+                                        return (
+                                            <li className={accordion === index ? "active" : "active"}>{item}</li>
+                                        )
+                                    })}
+                                </ul>                            
                         </Fade>
-                    </div>
+                    </div> 
             </div>
         </div>
     )
