@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom'
 
 import { annoncesList } from '../../datas/annonces'
 import AccordeonChild from '../../components/Accordeon'
+import AccordeonChildTbl from '../../components/Accordeon/Accordeontbl'
 
 
 
@@ -18,7 +19,7 @@ function Logement() {
     const { id } = useParams()
     const logement = annoncesList.find((opop) => opop.id === id) 
     const equipementList = logement.equipments
-    console.log(equipementList)
+    
 
     return (
         <div className='container'>
@@ -38,7 +39,7 @@ function Logement() {
                     title="Description"
                     content={logement.description}                    
                     /> 
-                <AccordeonChild 
+                <AccordeonChildTbl 
                     item = "Équipement"
                     index= {logement.id}
                     title="Équipement"

@@ -14,7 +14,6 @@ function RatingStar(){
     const { id } = useParams()
     const logement = annoncesList.find((opop) => opop.id === id)
     const ratingAnnonce = logement.rating
-    console.log(ratingAnnonce)
 
 return(
     <div className="rating" key="rating">

@@ -7,6 +7,7 @@ import {useEffect, useState} from 'react'
 //this transition is imported directly in accordion component
 export function Fade({visible,children}){
     const [showChildren, setShowChildren] = useState(visible);
+    console.log(showChildren)
 
 useEffect(() => {
     if (visible){

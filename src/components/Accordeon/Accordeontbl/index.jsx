@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 //import { annoncesList } from '../../../datas/annonces'
-import {Fade} from "../../components/Fade"
+import {Fade} from "../../../components/Fade"
 
 
 
 
 
-function AccordeonChild(item,index,title,content){
+function AccordeonChildTbl(item,index,title,content){
 
     // const define the accordion state (open/close)
     const [open, setOpen] = useState(false)
@@ -18,19 +18,21 @@ function AccordeonChild(item,index,title,content){
         return
     }
 
-const key1 = item.content.length
+    //we transform item.content into an array to do a map()
+    const EquipementList = item.content
+    console.log(EquipementList)
 
     //on click we check if accordeon is open. if not we add classname .active to div
     // and .rot to picto for rotation animation
     //fade animation plays if state open = true and add className to content.
     //we use props from parent to add title and content dynamically
     return(
-        <div key={`k${key1}`} className='infos_accordeon' onClick={() => toogleAccordion(index)}>
-        <div key={`p${key1}`} className='accordion_card_top'>
-            <div key={`m${key1}`} className='accordion_card_heading'>
+        <div className='infos_accordeon' onClick={() => toogleAccordion(index)}>
+        <div key={item.title} className='accordion_card_top'>
+            <div key='00' className='accordion_card_heading'>
                 <h2 className={open === false ? "active" : "" }>{item.title}</h2>
             </div>
-            <div key={`key${key1}`} className='accordion_card_heading_picto'>
+            <div key='01' className='accordion_card_heading_picto'>
                 {open === false ? (
                 <>
                     <i className="rot fas fa-chevron-down"></i>
@@ -43,17 +45,19 @@ const key1 = item.content.length
             </div>
         </div>
         <Fade visible={open}>
-            <div className={open === true ? "accordion_card_content active" : "accordion_card_content inactive"} >
+            <ul className={open === true ? "accordion_card_content active" : "accordion_card_content inactive"} >
                    
-                
-                <p key={`key${key1}`} className={ open === true ? "active" : "inactive"}>{item.content}</p>
+                {EquipementList.map((equip) =>
+                    <li key={`key${equip}`} className={ open === true ? "active" : "inactive"}>{equip}</li>
+
+                )}
        
 
-            </div>
+            </ul>
         </Fade>
     </div>
     )
     
 }
 
-export default AccordeonChild
+export default AccordeonChildTbl
