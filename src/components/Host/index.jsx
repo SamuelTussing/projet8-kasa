@@ -5,7 +5,6 @@ function Host(){
 
     const { id } = useParams()
     const logement = annoncesList.find((opop) => opop.id === id) 
-    console.log(logement.host.picture)
     const hostName = logement.host.name
     const hostPicture = logement.host.picture
 

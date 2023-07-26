@@ -2,6 +2,16 @@
 
 
 @media screen and (min-width: 320px){
+    .infos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_accordeon{
+            position: relative;
+            width: 100%;
+        }
+    }
+    
 .logementDescription{
     color: $first-color;
     &_title{
@@ -21,8 +31,17 @@
 }
 }
 
-@media screen and (min-width: 767px){
+@media screen and (min-width: 650px){
 
+    .infos{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+            &_accordeon{
+                width: 100%;
+            }
+                
+    }
     .logementDescription{
 
         &_title{

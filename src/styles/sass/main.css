@@ -201,10 +201,8 @@ h1 {
   .accordion {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     align-items: center;
     width: 80%;
-    margin: auto;
   }
   .accordion_card {
     width: 100%;
@@ -222,8 +220,11 @@ h1 {
     background-color: #ff6060;
     color: white;
     padding: 5px 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
   }
   .accordion_card_heading_picto {
     position: relative;
@@ -234,39 +235,80 @@ h1 {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
     padding: 10px;
     color: #ff6060;
-    position: relative;
-    top: -83px;
-    width: 92%;
+    width: calc(100% - 38px);
     background-color: #f6f6f6;
+  }
+  .rot {
+    animation: rotation 0.3s ease-in-out both normal;
+  }
+  .rotrev {
+    animation: rotationrev 0.3s ease-in-out both normal;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    95% {
+      transform: rotateZ(180deg);
+    }
+    100% {
+      transform: rotateZ(180deg);
+    }
+  }
+  @keyframes rotationrev {
+    0% {
+      transform: rotateZ(180deg);
+    }
+    5% {
+      transform: rotateZ(180deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
   }
   .active {
     display: block;
   }
   .inactive {
-    display: none;
-  }
-  .fade {
-    transition: all 0.3s;
-    transition-timing-function: ease-in-out;
-    transform-origin: 100% -50%;
-    transform: scaleY(1);
-  }
-  .fade.out {
-    transition: all 0.3s;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+    transform-origin: 50% 0%;
     opacity: 0;
     transform: scaleY(0);
+    max-height: 5px;
+  }
+  .fade {
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+    transform-origin: 50% 0%;
+    transform: scaleY(1);
+    max-height: 550px;
+    position: relative;
+    bottom: 83px;
+  }
+  .fade.out {
+    transition: all 0.2s;
+    transition-timing-function: ease-in;
+    transform-origin: 50% 0%;
+    opacity: 0;
+    transform: scaleY(0);
+    max-height: 10px;
   }
   .apcontainer {
     min-height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
-@media screen and (min-width: 500px) {
-  .infos {
-    display: flex;
-    flex-direction: row;
+@media screen and (min-width: 768px) {
+  .fade {
+    max-height: 250px;
+    transform-origin: 50% 0%;
   }
-  .accordion_card {
-    width: 100%;
+  .fade.out {
+    max-height: 250px;
+    transform-origin: 50% 0%;
   }
 }
 .error {
@@ -314,6 +356,7 @@ h1 {
   .banniere2 {
     height: 200px;
     margin-bottom: 50px;
+    width: 90%;
   }
   .banniere2 img {
     max-height: 200px;
@@ -334,6 +377,7 @@ h1 {
   .container {
     width: 90%;
     margin: auto;
+    height: 80%;
   }
   .slide {
     border-radius: 0.5rem;
@@ -427,6 +471,15 @@ h1 {
   }
 }
 @media screen and (min-width: 320px) {
+  .infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .infos_accordeon {
+    position: relative;
+    width: 100%;
+  }
   .logementDescription {
     color: #ff6060;
   }
@@ -445,7 +498,15 @@ h1 {
     align-items: flex-start;
   }
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 650px) {
+  .infos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .infos_accordeon {
+    width: 100%;
+  }
   .logementDescription_title {
     width: 70%;
     line-height: 40px;
@@ -466,7 +527,7 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    bottom: 76px;
+    bottom: 85px;
   }
   .host_name {
     font-size: 12px;
@@ -481,16 +542,7 @@ h1 {
     border-radius: 100%;
   }
 }
-@media screen and (min-width: 500px) {
-  .host {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    bottom: 420px;
-  }
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
   .host {
     display: flex;
     justify-content: flex-end;

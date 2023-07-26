@@ -1,7 +1,5 @@
 
 import Slider from '../../components/Slider'
-import Accordion1 from '../../components/VerticalAccordion/Accordionx1'
-import Accordion2 from '../../components/VerticalAccordion/Accordionx2'
 import Host from '../../components/Host'
 import CategoryButton from '../../components/CategoryButton'
 import RatingStar from '../../components/RatingStar'
@@ -9,6 +7,8 @@ import RatingStar from '../../components/RatingStar'
 import { useParams } from 'react-router-dom'
 
 import { annoncesList } from '../../datas/annonces'
+import AccordeonChild from '../../components/Accordeon'
+import AccordeonChildTbl from '../../components/Accordeon/Accordeontbl'
 
 
 
@@ -17,7 +17,9 @@ function Logement() {
     
 
     const { id } = useParams()
-    const logement = annoncesList.find((opop) => opop.id === id)     
+    const logement = annoncesList.find((opop) => opop.id === id) 
+    const equipementList = logement.equipments
+    
 
     return (
         <div className='container'>
@@ -31,8 +33,19 @@ function Logement() {
                 </div>
                 <Host />
                 <div className='infos'>
-                    <Accordion1 />
-                    <Accordion2 />
+                <AccordeonChild 
+                    item = "Description"
+                    index= {logement.id}
+                    title="Description"
+                    content={logement.description}                    
+                    /> 
+                <AccordeonChildTbl 
+                    item = "Équipement"
+                    index= {logement.id}
+                    title="Équipement"
+                    content={equipementList}                    
+                    /> 
+
                 </div>
             </div>
         </div>
