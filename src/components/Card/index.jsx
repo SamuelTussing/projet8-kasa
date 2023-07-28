@@ -1,9 +1,7 @@
-//import { Link } from 'react-router-dom'
-//import { annoncesList } from '../../datas/annonces'
+
 
 function handleClick(Card) {
-	//<Link to={`/logement/${id}`}></Link>
-	//alert ("hello")
+
 }
 
 

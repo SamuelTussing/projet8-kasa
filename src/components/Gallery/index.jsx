@@ -4,7 +4,8 @@ import Card from '../Card/index'
 
 
 
-
+//we create one card per logement present in database by mapping json file
+//sending props from parent to child (Card)
 function Gallery(){
     return (<div className="gallery">
                 <ul className ='gallery_list'>

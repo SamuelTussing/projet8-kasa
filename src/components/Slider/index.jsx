@@ -32,10 +32,10 @@ function Slider({data}) {
     const data2 = logement.pictures
 
 
-
+    //arrows and bulletpoints are visible only if there is more than 1 image in database
     return <div className="carousel">
                 <div className='arrow arrow_left' onClick={prevSlide}>
-                    <img src={ArrowLeft} alt='g' />
+                {data2.length > 1 ?   <img src={ArrowLeft} alt='g' /> : ""}
                 </div>
                 {data2.map((item,index) =>{
                     return <img
@@ -45,12 +45,12 @@ function Slider({data}) {
                         className={slide === index ? "slide" : "slide slide_hidden"}/>
                 })}
                 <div className='arrow arrow_right' onClick={nextSlide}>
-                    <img src={ArrowRight} alt='d' />
+                {data2.length > 1 ?   <img src={ArrowRight} alt='d' /> : ""}
                 </div>
                 <span className="indicators">
-                    {data2.map((_,index) =>{
+                    {data2.length > 1 ? data2.map((_,index) =>{
                         return <button key={index} onClick={() => setSlide(index)} className={slide === index ? "indicator indicator_selected" : "indicator"}></button>
-                    })}
+                    }) : ""}
                 </span>
             </div>
 }

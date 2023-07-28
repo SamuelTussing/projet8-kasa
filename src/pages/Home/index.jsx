@@ -6,7 +6,8 @@ import {Link} from 'react-router-dom'
 
 
 
-
+//each card has its own link url containing the logement id's
+//we map the database to create one card per logement
 function Home(){
     
 

@@ -9,6 +9,8 @@ export function Fade({visible,children}){
     const [showChildren, setShowChildren] = useState(visible);
     console.log(showChildren)
 
+
+    //effect added for the accordion opening and closing effect
 useEffect(() => {
     if (visible){
         setShowChildren(true);
