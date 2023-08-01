@@ -3,7 +3,6 @@ import Slider from '../../components/Slider'
 import Host from '../../components/Host'
 import CategoryButton from '../../components/CategoryButton'
 import RatingStar from '../../components/RatingStar'
-//import{useState} from 'react'
 import { useParams } from 'react-router-dom'
 
 import { annoncesList } from '../../datas/annonces'
@@ -13,16 +12,20 @@ import AccordeonChildTbl from '../../components/Accordeon/Accordeontbl'
 
 
 
+
 function Logement() {
     
-
-    const { id } = useParams()
-    const logement = annoncesList.find((opop) => opop.id === id) 
+    
+    
+    const { id } = useParams() 
+    const logement = annoncesList.find((opop) => opop.id === id)
     const equipementList = logement.equipments
     
 
     return (
+        
         <div className='container'>
+         
             <Slider data={annoncesList} />
             <div className='logementDescription'>
                 <h1 className='logementDescription_title'>{logement.title}</h1>
@@ -47,7 +50,7 @@ function Logement() {
                     /> 
 
                 </div>
-            </div>
+            </div>  
         </div>
     )
 }
