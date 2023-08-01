@@ -29,7 +29,7 @@ function Slider({data}) {
     const logement = annoncesList.find((opop) => opop.id === id)
     
     //creating variable for the pictures to map it in <return>
-    const data2 = logement.pictures
+    const data2 = logement.pictures 
 
 
     //arrows and bulletpoints are visible only if there is more than 1 image in database

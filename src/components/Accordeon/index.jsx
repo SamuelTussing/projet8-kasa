@@ -46,7 +46,7 @@ function AccordeonChild(item,index,title,content){
             <div className={open === true ? "accordion_card_content active" : "accordion_card_content inactive"} >
                    
                 
-                <p  className={ open === true ? "active" : "inactive"}>{item.content}</p>
+                <p  className={ open === true ? "active" : "inactive"}>{item.content}</p> 
        
 
             </div>
