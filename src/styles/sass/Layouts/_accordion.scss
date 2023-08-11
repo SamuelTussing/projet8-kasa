@@ -1,7 +1,11 @@
 @import "../Utils/variables";
 
 @media screen and (min-width: 320px){
+    ul{
+        list-style: none;
 
+    }
+    
     .accordion{
         display: flex;
         flex-direction: column;

@@ -13,8 +13,7 @@ import NotFound from './pages/NotFound'
  
 ReactDOM.render(
     <React.StrictMode>
-        <Router>
-           
+        <Router>    
 			<Header />
             <ErrorBoundary>
             <Routes>
@@ -25,8 +24,7 @@ ReactDOM.render(
                 <Route path="*" element= { <Navigate replace to='logement/404' /> } />
             </Routes>
             </ErrorBoundary>
-            <Footer />
-            
+            <Footer />       
         </Router>
     </React.StrictMode>,
 document.getElementById('root') 

@@ -6,7 +6,7 @@ import {Fade} from "../../components/Fade"
 
 
 
-function AccordeonChild(item,index,title,content){
+function AccordeonChild(item,index,title,content,isColumn){
 
     // const define the accordion state (open/close)
     const [open, setOpen] = useState(false)
@@ -17,8 +17,7 @@ function AccordeonChild(item,index,title,content){
         setOpen(o => !o)
         return
     }
-
-
+console.log(item.isColumn)
 
     //on click we check if accordeon is open. if not we add classname .active to div
     // and .rot to picto for rotation animation
@@ -45,8 +44,17 @@ function AccordeonChild(item,index,title,content){
         <Fade visible={open}>
             <div className={open === true ? "accordion_card_content active" : "accordion_card_content inactive"} >
                    
-                
-                <p  className={ open === true ? "active" : "inactive"}>{item.content}</p> 
+            {item.isColumn ? (
+          <ul className=""> 
+             {/* Génère les éléments de la liste à partir du tableau de la prop content */}
+            {item.content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+            <p  className={ open === true ? "active" : "inactive"}>{item.content}</p> 
+        )}
+         
        
 
             </div>

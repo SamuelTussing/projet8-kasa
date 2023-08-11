@@ -1,5 +1,4 @@
-import { useParams } from 'react-router-dom'
-import { annoncesList } from '../../datas/annonces'
+
 
 
 
@@ -9,21 +8,19 @@ import { annoncesList } from '../../datas/annonces'
 
 //array value stars and set index +1 to have first index = 1
 //return stars with classname if rating >= to star index then star is red else is grey
-function RatingStar(){
-
-    const { id } = useParams()
-    const logement = annoncesList.find((opop) => opop.id === id)
-    const ratingAnnonce = logement.rating
-
+function RatingStar({rating}){
+    
 return(
     <div className="rating" key="rating">
         {[...Array(5)].map((star, index) => {
             index +=1;
             return( <div key={`key${index}`}>           
-                <i className={ratingAnnonce >= index ? "fa-solid fa-star red small" : "fa-solid fa-star small"} id={index} key={index}></i>
-                <i className={ratingAnnonce >= index ? "fa-solid fa-star red big fa-2x" : "fa-solid fa-star big fa-2x"} id={index}key={`1+${index}`}></i>
+                <i className={rating >= index ? "fa-solid fa-star red small" : "fa-solid fa-star small"} id={index} key={index}></i>
+                <i className={rating >= index ? "fa-solid fa-star red big fa-2x" : "fa-solid fa-star big fa-2x"} id={index}key={`1+${index}`}></i>
                 </div>  )
+                
         })}
+        
     </div>
 )
 

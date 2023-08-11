@@ -1,7 +1,9 @@
-import { annoncesList } from '../../datas/annonces'
 import Card from '../../components/Card'
 import Banner from '../../components/Banner'
 import {Link} from 'react-router-dom'
+import dataLogement from '../../datas/annonces.json'
+import bannerPicture from '../../assets/banniere_Img.jpg'
+
 
 
 
@@ -9,14 +11,18 @@ import {Link} from 'react-router-dom'
 //each card has its own link url containing the logement id's
 //we map the database to create one card per logement
 function Home(){
-    
 
     
     return ( <div>
-              <Banner />
+              <Banner 
+              image = {bannerPicture}
+              alt = "Photo de montagne"
+              title = "Chez vous, partout et ailleurs"/>
+
+
               <div className="gallery">
                 <ul className ='gallery_list'>
-                    {annoncesList.map(({id, title, cover, pictures}) => (
+                    {dataLogement.map(({id, title, cover, pictures}) => (
                         <div key={id} className='gallery_list_cards'>
                             <Link to={`/logement/${id}`} className='gallery_list_cards_link'>
 						        <Card

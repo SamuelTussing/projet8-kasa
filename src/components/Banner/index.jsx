@@ -1,11 +1,11 @@
-import banniereImg from '../../assets/banniere_Img.jpg'
 
-function Banniere(){
+
+function Banniere(image, alt, title){
     return <div className='banniere'>
                 <div className='banniere_background'>
-                    <img src={banniereImg} alt="banniere" />
+                    <img src={image} alt={alt} />
                 </div>
-                <h1>Chez vous, partout et ailleurs</h1>
+                <h1>{title}</h1>
             </div>
 }
 
