@@ -1,15 +1,11 @@
 
-import Slider from '../../components/Slider'
+import Slider from '../../components/Carrousel'
 import Host from '../../components/Host'
-import CategoryButton from '../../components/CategoryButton'
 import RatingStar from '../../components/RatingStar'
 import { useParams } from 'react-router-dom'
-
-import { annoncesList } from '../../datas/annonces'
+import Tag from '../../components/Tag/index';
 import AccordeonChild from '../../components/Accordeon'
-import AccordeonChildTbl from '../../components/Accordeon/Accordeontbl'
-
-
+import { useEffect, useState } from 'react';
 
 
 
@@ -18,35 +14,83 @@ function Logement() {
     
     
     const { id } = useParams() 
-    const logement = annoncesList.find((opop) => opop.id === id)
-    const equipementList = logement.equipments
+    //const [logements, setLogements] = useState([])
+    //const equipementList = logement.equipments
     
+
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect (() => {
+    fetch("/api/annonces.json")
+    .then((response) => {
+    if (response.ok) {
+        return response.json();
+    }
+    throw response;
+    })
+    .then((data) =>{
+       setData(data)
+        //console.log("setData", data)
+    })
+    .catch((error) => {
+        console.error("error fetching", error);
+        setError(error);
+    })
+    .finally(() => {
+        setLoading(false);
+    });
+}, []  );
+if (loading) return "Loading ....";
+if (error) return "Error ! "
+
+const logement = data.find((item) => item.id === id)
+const carrouselPics = logement.pictures
+
+
+
 
     return (
         
         <div className='container'>
          
-            <Slider data={annoncesList} />
+            <Slider data={carrouselPics} />
             <div className='logementDescription'>
                 <h1 className='logementDescription_title'>{logement.title}</h1>
                 <span className='logementDescription_location'>{logement.location}</span>
                 <div className='logementDescription_stats'>
-                <CategoryButton />
-                <RatingStar />
+                <div className ="tag">
+                    {logement.tags.map((tag, index) => (
+                        <Tag key={index} content={tag} />
+                    ))}
                 </div>
-                <Host />
+
+                <RatingStar
+                rating={logement.rating} />
+                </div>
+
+                
+                <Host
+                hostInfos= {logement.host.name}
+                hostPic = {logement.host.picture}
+                />
+
+
                 <div className='infos'>
                 <AccordeonChild 
                     item = "Description"
                     index= {logement.id}
                     title="Description"
-                    content={logement.description}                    
+                    content={logement.description}
+                    isColumn= {false}                    
                     /> 
-                <AccordeonChildTbl 
+                <AccordeonChild 
                     item = "Équipement"
                     index= {logement.id}
                     title="Équipement"
-                    content={equipementList}                    
+                    content={logement.equipments} 
+                    isColumn= {true}                  
                     /> 
 
                 </div>

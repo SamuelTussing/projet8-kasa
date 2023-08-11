@@ -2,10 +2,10 @@ import logo from '../../assets/logo-kasa-blanc.png'
 
 
 function Footer(){
-    return  <div className='footer'>
+    return  <footer className='footer'>
                 <img src={logo} alt='logo kasa blanc' />
                 <p>© 2020 Kasa. All rights reserved</p>
-            </div>
+            </footer>
 }
 
 export default Footer
