@@ -36,7 +36,7 @@
         justify-content:flex-end;
         align-items: center;
         position: relative;
-        top: -191px;
+        top: -216px;
         right: 30px;
         &_name{
             font-size: 18px;
@@ -48,6 +48,15 @@
             width: 64px;
             border-radius: 100%;
         }
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .host{
+        top: -166px;
+        right: 30px;
     }
 
 }

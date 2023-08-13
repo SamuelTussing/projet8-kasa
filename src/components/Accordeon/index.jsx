@@ -46,7 +46,7 @@ console.log(item.isColumn)
                    
             {item.isColumn ? (
           <ul className=""> 
-             {/* Génère les éléments de la liste à partir du tableau de la prop content */}
+             {/* if propscontent = list then it generates <li> else it is a simple <p> */}
             {item.content.map((item, index) => (
               <li key={index}>{item}</li>
             ))}

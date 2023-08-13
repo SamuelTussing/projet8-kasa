@@ -61,6 +61,7 @@
         position: absolute;
         bottom: 14px;
         color: white;
+        display: none;
     }
 }
 
@@ -69,5 +70,8 @@
     .carousel{
         min-height: 415px;
     }
-    
+    .pagination{
+
+        display: block;
+    }
 }
