@@ -13,12 +13,13 @@ import bannerPicture from '../../assets/banniere_Img.jpg'
 function Home(){
 
     
-    return ( <div>
+    return ( <main>
+            <section className ='banniereContainer'>
               <Banner 
               image = {bannerPicture}
               alt = "Photo de montagne"
               title = "Chez vous, partout et ailleurs"/>
-
+            </section>
 
               <div className="gallery">
                 <ul className ='gallery_list'>
@@ -37,7 +38,7 @@ function Home(){
                     ))}
                 </ul>
             </div>
-            </div>
+            </main>
 )}
 
 export default Home

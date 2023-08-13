@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap");
 body, h1, h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   max-width: 1440px;
 }
 
@@ -15,18 +15,20 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 7%;
+    margin: 0px 14%;
     max-height: 60px;
     padding-top: 40px;
     background-color: white;
   }
   .header_img {
-    height: 35px;
+    height: 25px;
   }
   .header a {
     text-decoration: none;
     color: #ff6060;
     margin-left: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
   }
   .header a:hover {
     text-decoration: underline;
@@ -40,10 +42,15 @@ h1 {
 @media screen and (min-width: 500px) {
   .header {
     justify-content: space-between;
-    margin: 0 7%;
+    margin: 0 14%;
+  }
+  .header_img {
+    height: 68px;
   }
   .header a {
     margin-left: 50px;
+    font-size: 24px;
+    text-transform: none;
   }
 }
 @media screen and (min-width: 320px) {
@@ -52,12 +59,15 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin-bottom: -96px;
+    width: 85%;
   }
   .banniere_background {
     width: 90%;
     background-color: black;
     border-radius: 10px;
     margin-bottom: 10px;
+    height: 111px;
   }
   .banniere img {
     width: 100%;
@@ -65,29 +75,52 @@ h1 {
        object-fit: cover;
     border-radius: 10px;
     opacity: 0.8;
-    height: 223px;
+    height: 111px;
   }
   .banniere h1 {
+    font-family: "Montserrat", sans-serif;
     color: white;
     position: relative;
-    bottom: 95px;
-    left: -22px;
+    bottom: 109px;
+    left: -11px;
     width: 200px;
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 22px;
   }
 }
 @media screen and (min-width: 500px) {
   .banniere {
     height: 200px;
-    width: 90%;
+    margin-bottom: 0px;
+  }
+  .banniere_background {
+    height: 223px;
   }
   .banniere img {
-    max-height: 223px;
+    height: 223px;
   }
   .banniere h1 {
-    bottom: 120px;
+    bottom: 153px;
     left: 0px;
     width: auto;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banniere {
+    height: 200px;
+  }
+  .banniere_background {
+    height: 223px;
+  }
+  .banniere img {
+    height: 223px;
+  }
+  .banniere h1 {
+    bottom: 153px;
+    left: 0px;
+    width: auto;
+    font-size: 48px;
   }
 }
 @media screen and (min-width: 320px) {
@@ -141,7 +174,7 @@ h1 {
     top: -311px;
     left: 10px;
     max-width: 70%;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 16px;
   }
 }
@@ -158,6 +191,7 @@ h1 {
     display: flex;
     padding: 0px;
     width: 100%;
+    justify-content: center;
   }
   .gallery_list {
     display: flex;
@@ -165,7 +199,8 @@ h1 {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    width: 100%;
+    width: 85%;
+    align-items: center;
   }
   .gallery_list_cards {
     width: 90%;
@@ -230,6 +265,10 @@ h1 {
     height: 30px;
     display: flex;
     align-items: center;
+  }
+  .accordion_card_heading h2 {
+    font-size: 18px;
+    font-weight: 500;
   }
   .accordion_card_heading_picto {
     position: relative;
@@ -304,6 +343,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -425,11 +465,15 @@ h1 {
     position: absolute;
     bottom: 14px;
     color: white;
+    display: none;
   }
 }
 @media screen and (min-width: 500px) {
   .carousel {
     min-height: 415px;
+  }
+  .pagination {
+    display: block;
   }
 }
 @media screen and (min-width: 320px) {
@@ -494,7 +538,13 @@ h1 {
     width: 85%;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 118px;
+    position: relative;
+    left: 8px;
+  }
+  .banniereContainer {
+    display: flex;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 650px) {
@@ -521,7 +571,7 @@ h1 {
   }
   .apAccordion {
     margin-top: 90px;
-    width: 75%;
+    width: 70%;
   }
 }
 @media screen and (min-width: 320px) {
@@ -551,7 +601,7 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    top: -191px;
+    top: -216px;
     right: 30px;
   }
   .host_name {
@@ -563,6 +613,12 @@ h1 {
     height: 64px;
     width: 64px;
     border-radius: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .host {
+    top: -166px;
+    right: 30px;
   }
 }
 @media screen and (min-width: 320px) {
