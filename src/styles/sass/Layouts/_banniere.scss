@@ -7,20 +7,20 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    height: 110px;
+
     
         &_background{
-            height: 100%;
             width: 90%;  
             background-color: black;
             border-radius: 10px;
+            margin-bottom: 10px;
         }
         & img{
-            max-height: 111px;
             width: 100%;
             object-fit: cover;
             border-radius: 10px;
             opacity: 0.8;
+            height: 223px;
 
 
         }
@@ -39,8 +39,9 @@
 
     .banniere{
         height: 200px;
+        width: 90%;
             & img{
-                max-height: 200px;
+                max-height: 223px;
             }
             & h1{
                 bottom: 120px;

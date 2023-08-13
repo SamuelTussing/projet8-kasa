@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner';
-import Accordion from '../../components/VerticalAccordion'
+import AccordeonChild from '../../components/Accordeon/index';
 import bannerPicture from '../../assets/Image source 2.png'
 import aboutData from '../../datas/apropos.json'
 
@@ -10,10 +10,15 @@ function aPropos() {
               image = {bannerPicture}
               alt = "Photo de montagne"
               title = ""/>
-          {aboutData.map((data, index) => (
-          <Accordion key={index} title={data.title} content={data.description} />
-        ))}
-        <Accordion />
+              <div className = 'apAccordion'>
+                {aboutData.map((data, index) => (
+                  <AccordeonChild 
+                  key={data.id} 
+                  title={data.title} 
+                  content={data.content} />
+                ))}
+                  
+        </div>
       </div>
   
   );
