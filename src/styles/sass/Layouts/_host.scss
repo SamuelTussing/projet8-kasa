@@ -4,10 +4,8 @@
 
     .host{
         display: flex;
-        justify-content:flex-end;
         align-items: center;
-        position: relative;
-        bottom: 85px;
+        flex-direction: row;
         
         &_name{
             font-size: 12px;
@@ -35,9 +33,7 @@
         display: flex;
         justify-content:flex-end;
         align-items: center;
-        position: relative;
-        top: -216px;
-        right: 30px;
+
         &_name{
             font-size: 18px;
             width: 100px;
@@ -48,15 +44,6 @@
             width: 64px;
             border-radius: 100%;
         }
-    }
-
-}
-
-@media screen and (min-width: 1024px){
-
-    .host{
-        top: -166px;
-        right: 30px;
     }
 
 }

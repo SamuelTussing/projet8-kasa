@@ -523,6 +523,7 @@ h1 {
     font-weight: 500;
     font-size: 18px;
     width: 90%;
+    margin-top: 0px;
   }
   .logementDescription span {
     font-size: 14px;
@@ -546,6 +547,20 @@ h1 {
     display: flex;
     justify-content: center;
   }
+  .column1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .column2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    margin-bottom: 55px;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 650px) {
   .infos {
@@ -556,10 +571,18 @@ h1 {
   .infos_accordeon {
     width: 100%;
   }
+  .logementDescription {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
   .logementDescription_title {
     width: 70%;
     line-height: 40px;
     font-size: 36px;
+    margin-top: 10px;
   }
   .logementDescription span {
     font-size: 18px;
@@ -573,14 +596,20 @@ h1 {
     margin-top: 90px;
     width: 70%;
   }
+  .column2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    width: 50%;
+    gap: 50px;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 320px) {
   .host {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    position: relative;
-    bottom: 85px;
+    flex-direction: row;
   }
   .host_name {
     font-size: 12px;
@@ -600,9 +629,6 @@ h1 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
-    top: -216px;
-    right: 30px;
   }
   .host_name {
     font-size: 18px;
@@ -615,17 +641,10 @@ h1 {
     border-radius: 100%;
   }
 }
-@media screen and (min-width: 1024px) {
-  .host {
-    top: -166px;
-    right: 30px;
-  }
-}
 @media screen and (min-width: 320px) {
   .rating {
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
   }
   .fa-star {
     height: 18px;
