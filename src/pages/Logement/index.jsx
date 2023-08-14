@@ -53,29 +53,35 @@ const carrouselPics = logement.pictures
 
     return (
         
-        <div className='container'>
+        <section className='container'>
          
             <Slider data={carrouselPics} />
-            <div className='logementDescription'>
-                <h1 className='logementDescription_title'>{logement.title}</h1>
-                <span className='logementDescription_location'>{logement.location}</span>
-                <div className='logementDescription_stats'>
-                <div className ="tag">
-                    {logement.tags.map((tag, index) => (
-                        <Tag key={index} content={tag} />
-                    ))}
+            <article className='logementDescription'>
+                <div className ="column1">
+                    <h1 className='logementDescription_title'>{logement.title}</h1>
+                    <span className='logementDescription_location'>{logement.location}</span>
+                    <div className='logementDescription_stats'>
+                        <div className ="tag">
+                            {logement.tags.map((tag, index) => (
+                            <Tag key={index} content={tag} />
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
-                <RatingStar
-                rating={logement.rating} />
-                </div>
+                <div className="column2">
+                    <RatingStar
+                    rating={logement.rating} />
+                    
 
+                 
+                    <Host
+                    hostInfos= {logement.host.name}
+                    hostPic = {logement.host.picture}
+                    />
+                </div>
                 
-                <Host
-                hostInfos= {logement.host.name}
-                hostPic = {logement.host.picture}
-                />
-
+            </article>
 
                 <div className='infos'>
                 <AccordeonChild 
@@ -94,8 +100,8 @@ const carrouselPics = logement.pictures
                     /> 
 
                 </div>
-            </div>  
-        </div>
+              
+        </section>
     )
 }
 

@@ -1,9 +1,9 @@
 import Card from '../../components/Card'
 import Banner from '../../components/Banner'
 import {Link} from 'react-router-dom'
-import dataLogement from '../../datas/annonces.json'
+//import dataLogement from '../../datas/annonces.json'
 import bannerPicture from '../../assets/banniere_Img.jpg'
-
+import { useEffect,useState } from 'react'
 
 
 
@@ -12,6 +12,34 @@ import bannerPicture from '../../assets/banniere_Img.jpg'
 //we map the database to create one card per logement
 function Home(){
 
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect (() => {
+  fetch("/api/annonces.json")
+  .then((response) => {
+  if (response.ok) {
+      return response.json();
+  }
+  throw response;
+  })
+  .then((data) =>{
+     setData(data)
+      //console.log("setData", data)
+  })
+  .catch((error) => {
+      console.error("error fetching", error);
+      setError(error);
+  })
+  .finally(() => {
+      setLoading(false);
+  });
+}, []  );
+if (loading) return "Loading ....";
+if (error) return "Error ! "
+
+console.log(data)
     
     return ( <main>
             <section className ='banniereContainer'>
@@ -23,7 +51,7 @@ function Home(){
 
               <div className="gallery">
                 <ul className ='gallery_list'>
-                    {dataLogement.map(({id, title, cover, pictures}) => (
+                    {data.map(({id, title, cover, pictures}) => (
                         <div key={id} className='gallery_list_cards'>
                             <Link to={`/logement/${id}`} className='gallery_list_cards_link'>
 						        <Card

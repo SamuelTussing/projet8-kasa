@@ -17,7 +17,7 @@ function AccordeonChild(item,index,title,content,isColumn){
         setOpen(o => !o)
         return
     }
-console.log(item.isColumn)
+//console.log(item.isColumn)
 
     //on click we check if accordeon is open. if not we add classname .active to div
     // and .rot to picto for rotation animation

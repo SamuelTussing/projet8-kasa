@@ -1,7 +1,7 @@
 
 
 function Host(hostInfos,hostPic){
-console.log("pic", hostInfos)
+//console.log("pic", hostInfos)
 
     return(
         <div className='host' key={"id"}>
