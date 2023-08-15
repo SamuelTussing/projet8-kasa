@@ -16,6 +16,7 @@ function Home(){
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  /*useEffect to fetch json file and later the API*/
   useEffect (() => {
   fetch("/api/annonces.json")
   .then((response) => {
@@ -39,7 +40,7 @@ function Home(){
 if (loading) return "Loading ....";
 if (error) return "Error ! "
 
-console.log(data)
+
     
     return ( <main>
             <section className ='banniereContainer'>
