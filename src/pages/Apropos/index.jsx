@@ -1,9 +1,39 @@
 import Banner from '../../components/Banner';
 import AccordeonChild from '../../components/Accordeon/index';
 import bannerPicture from '../../assets/Image source 2.png'
-import aboutData from '../../datas/apropos.json'
+import { useEffect,useState } from 'react'
 
-function aPropos() {
+function APropos() {
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+   /*useEffect to fetch json file and later the API*/
+   useEffect (() => {
+    fetch("/api/apropos.json")
+    .then((response) => {
+    if (response.ok) {
+        return response.json();
+    }
+    throw response;
+    })
+    .then((data) =>{
+       setData(data)
+        //console.log("setData", data)
+    })
+    .catch((error) => {
+        console.error("error fetching", error);
+        setError(error);
+    })
+    .finally(() => {
+        setLoading(false);
+    });
+  }, []  );
+  if (loading) return "Loading ....";
+  if (error) return "Error ! "
+
+
     return (
       <div className='apcontainer'>
         <Banner 
@@ -11,7 +41,7 @@ function aPropos() {
               alt = "Photo de montagne"
               title = ""/>
               <div className = 'apAccordion'>
-                {aboutData.map((data, index) => (
+                {data.map((data, index) => (
                   <AccordeonChild 
                   key={data.id} 
                   title={data.title} 
@@ -24,4 +54,4 @@ function aPropos() {
   );
   }
   
-  export default aPropos;
+  export default APropos;
