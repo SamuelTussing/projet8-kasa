@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/projet8-kasa/static/css/main.00e45d6c.chunk.css",
+    "main.js": "/projet8-kasa/static/js/main.fd46540c.chunk.js",
+    "main.js.map": "/projet8-kasa/static/js/main.fd46540c.chunk.js.map",
+    "runtime-main.js": "/projet8-kasa/static/js/runtime-main.7fbaf9af.js",
+    "runtime-main.js.map": "/projet8-kasa/static/js/runtime-main.7fbaf9af.js.map",
+    "static/js/2.081c34a2.chunk.js": "/projet8-kasa/static/js/2.081c34a2.chunk.js",
+    "static/js/2.081c34a2.chunk.js.map": "/projet8-kasa/static/js/2.081c34a2.chunk.js.map",
+    "index.html": "/projet8-kasa/index.html",
+    "static/css/main.00e45d6c.chunk.css.map": "/projet8-kasa/static/css/main.00e45d6c.chunk.css.map",
+    "static/js/2.081c34a2.chunk.js.LICENSE.txt": "/projet8-kasa/static/js/2.081c34a2.chunk.js.LICENSE.txt",
+    "static/media/Image source 2.dc7a08e1.png": "/projet8-kasa/static/media/Image source 2.dc7a08e1.png",
+    "static/media/banniere_Img.f4962aeb.jpg": "/projet8-kasa/static/media/banniere_Img.f4962aeb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7fbaf9af.js",
+    "static/js/2.081c34a2.chunk.js",
+    "static/css/main.00e45d6c.chunk.css",
+    "static/js/main.fd46540c.chunk.js"
+  ]
+}
