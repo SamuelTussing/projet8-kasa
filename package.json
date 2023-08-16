@@ -1,5 +1,4 @@
 {
-  "homepage":"http://SamuelTussing.github.io/projet8-kasa",
   "name": "projet-8-kasa",
   "version": "0.1.0",
   "private": true,
@@ -61,5 +60,6 @@
   "bugs": {
     "url": "https://github.com/SamuelTussing/projet8-kasa/issues"
   },
+  "homepage":"http://SamuelTussing.github.io/projet8-kasa",
   "proxy": "http://localhost:3000"
 }
