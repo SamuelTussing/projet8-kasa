@@ -1,4 +1,5 @@
 {
+  "homepage":"http://SamuelTussing.github.io/projet8-kasa",
   "name": "projet-8-kasa",
   "version": "0.1.0",
   "private": true,
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d build",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test",
     "eject": "react-scripts --openssl-legacy-provider eject",
@@ -41,6 +44,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "prettier": "^3.0.0"
   },
   "repository": {
@@ -57,7 +61,5 @@
   "bugs": {
     "url": "https://github.com/SamuelTussing/projet8-kasa/issues"
   },
-  "homepage": ".",
   "proxy": "http://localhost:3000"
-  
 }
