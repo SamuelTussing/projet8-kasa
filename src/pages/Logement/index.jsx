@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import Tag from '../../components/Tag/index';
 import AccordeonChild from '../../components/Accordeon'
 import { useEffect, useState } from 'react';
+import logementData from '../../../public/api/annonces.json'
 
 
 
@@ -14,8 +15,7 @@ function Logement() {
     
     
     const { id } = useParams() 
-    //const [logements, setLogements] = useState([])
-    //const equipementList = logement.equipments
+
     
 
     const [data, setData] = useState(null);
@@ -43,7 +43,9 @@ function Logement() {
     });
 }, []  );
 if (loading) return "Loading ....";
-if (error) return "Error ! "
+if (error) {
+    setData(logementData)
+  }
 
 const logement = data.find((item) => item.id === id)
 const carrouselPics = logement.pictures

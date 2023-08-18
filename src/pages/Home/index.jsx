@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 //import dataLogement from '../../datas/annonces.json'
 import bannerPicture from '../../assets/banniere_Img.jpg'
 import { useEffect,useState } from 'react'
+import logementData from '../../../public/api/annonces.json'
 
 
 
@@ -38,7 +39,9 @@ function Home(){
   });
 }, []  );
 if (loading) return "Loading ....";
-if (error) return "Fetching error !! =( "
+if (error) {
+    setData(logementData)
+  }
 
 
     
