@@ -3,6 +3,7 @@ import AccordeonChild from '../../components/Accordeon/index';
 import bannerPicture from '../../assets/Image source 2.png'
 import { useEffect,useState } from 'react'
 
+
 function APropos() {
 
   const [data, setData] = useState(null);
@@ -31,7 +32,9 @@ function APropos() {
     });
   }, []  );
   if (loading) return "Loading ....";
-  if (error) return "Error ! "
+  if (error) {
+    return "Fetching error !! =( ";
+  }
 
 
     return (

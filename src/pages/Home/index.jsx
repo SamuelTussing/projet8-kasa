@@ -18,7 +18,7 @@ function Home(){
 
   /*useEffect to fetch json file and later the API*/
   useEffect (() => {
-  fetch("./api/annonces.json")
+  fetch("api/annonces.json")
   .then((response) => {
   if (response.ok) {
       return response.json();
