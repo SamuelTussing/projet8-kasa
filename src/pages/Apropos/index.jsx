@@ -2,7 +2,7 @@ import Banner from '../../components/Banner';
 import AccordeonChild from '../../components/Accordeon/index';
 import bannerPicture from '../../assets/Image source 2.png'
 import { useEffect,useState } from 'react'
-import aPData from '../../../public/api/apropos.json'
+
 
 function APropos() {
 
@@ -33,7 +33,7 @@ function APropos() {
   }, []  );
   if (loading) return "Loading ....";
   if (error) {
-    setData(aPData)
+    return "Fetching error !! =( ";
   }
 
 

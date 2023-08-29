@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 //import dataLogement from '../../datas/annonces.json'
 import bannerPicture from '../../assets/banniere_Img.jpg'
 import { useEffect,useState } from 'react'
-import logementData from '../../../public/api/annonces.json'
 
 
 
@@ -19,7 +18,7 @@ function Home(){
 
   /*useEffect to fetch json file and later the API*/
   useEffect (() => {
-  fetch("./api/annonces.json")
+  fetch("api/annonces.json")
   .then((response) => {
   if (response.ok) {
       return response.json();
@@ -39,9 +38,7 @@ function Home(){
   });
 }, []  );
 if (loading) return "Loading ....";
-if (error) {
-    setData(logementData)
-  }
+if (error) return "Fetching error !! =( "
 
 
     

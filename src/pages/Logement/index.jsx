@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import Tag from '../../components/Tag/index';
 import AccordeonChild from '../../components/Accordeon'
 import { useEffect, useState } from 'react';
-import logementData from '../../../public/api/annonces.json'
+
 
 
 
@@ -29,10 +29,12 @@ function Logement() {
         return response.json();
     }
     throw response;
+    
     })
     .then((data) =>{
-       setData(data)
-        //console.log("setData", data)
+        data.find((item) => item.id === id ? setData(item) : null)
+       
+
     })
     .catch((error) => {
         console.error("error fetching", error);
@@ -41,14 +43,14 @@ function Logement() {
     .finally(() => {
         setLoading(false);
     });
-}, []  );
+}, [id]  );
 if (loading) return "Loading ....";
 if (error) {
-    setData(logementData)
+    return "Fetching error !! =( ";
   }
 
-const logement = data.find((item) => item.id === id)
-const carrouselPics = logement.pictures
+
+const carrouselPics = data.pictures
 
 
 
@@ -60,11 +62,11 @@ const carrouselPics = logement.pictures
             <Slider data={carrouselPics} />
             <article className='logementDescription'>
                 <div className ="column1">
-                    <h1 className='logementDescription_title'>{logement.title}</h1>
-                    <span className='logementDescription_location'>{logement.location}</span>
+                    <h1 className='logementDescription_title'>{data.title}</h1>
+                    <span className='logementDescription_location'>{data.location}</span>
                     <div className='logementDescription_stats'>
                         <div className ="tag">
-                            {logement.tags.map((tag, index) => (
+                            {data.tags.map((tag, index) => (
                             <Tag key={index} content={tag} />
                             ))}
                         </div>
@@ -73,13 +75,13 @@ const carrouselPics = logement.pictures
 
                 <div className="column2">
                     <RatingStar
-                    rating={logement.rating} />
+                    rating={data.rating} />
                     
 
                  
                     <Host
-                    hostInfos= {logement.host.name}
-                    hostPic = {logement.host.picture}
+                    hostInfos= {data.host.name}
+                    hostPic = {data.host.picture}
                     />
                 </div>
                 
@@ -88,16 +90,16 @@ const carrouselPics = logement.pictures
                 <div className='infos'>
                 <AccordeonChild 
                     item = "Description"
-                    index= {logement.id}
+                    index= {data.id}
                     title="Description"
-                    content={logement.description}
+                    content={data.description}
                     isColumn= {false}                    
                     /> 
                 <AccordeonChild 
                     item = "Équipement"
-                    index= {logement.id}
+                    index= {data.id}
                     title="Équipement"
-                    content={logement.equipments} 
+                    content={data.equipments} 
                     isColumn= {true}                  
                     /> 
 
