@@ -1,7 +1,7 @@
 # Projet 8 du parcours Développeur web d'OpenClassrooms : Créez une application web de location immobilière avec React
 
 ### Lien vers le site :
-https://kasasitewebtussingsamuel.vercel.app/logement/7cbb378e
+[https://kasasitewebtussingsamuel.vercel.app/logement/7cbb378e](https://projet8-kasa-omega.vercel.app/)
 
 ### Compétences évaluées :
 * Réaliser une application web en utilisant Create React App
