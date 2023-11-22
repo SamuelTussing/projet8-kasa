@@ -61,24 +61,6 @@ Sur tablette et desktop, le site devra s’adapter, mais ces supports n’étant
 Chrome et Firefox.
 
 
-# Hi, I'm Samuel ! 👋
-
-[https://github.com/youcefKNL?tab=repositories](https://github.com/SamuelTussing?tab=repositories)
-
-
-
-
-
-
-
-
-
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/SamuelTussing?tab=repositories)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/](https://fr.linkedin.com/in/samuel-tussing-a4a178b4)https://fr.linkedin.com/in/samuel-tussing-a4a178b4)
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
